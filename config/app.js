@@ -56,7 +56,7 @@ app.set("views", views)
  * Routes
  */
 
-//app.use("/", require("./routes/root_router")(app))
+app.use("/", require("./routes/root_router")(app))
 
 /**
  * Start server
