@@ -12,7 +12,7 @@ const React = require('react')
 
 class HelloMessage extends React.Component {
   render() {
-    return <div>Hello {this.props.name}. My friend!</div>
+    return <div>Hello Team Easypeasy!</div>
   }
 }
 
