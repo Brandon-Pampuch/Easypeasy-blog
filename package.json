@@ -4,7 +4,9 @@
   "description": "A simple blog with big plans.",
   "main": "node config/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node config/app.js",
+    "test": "ava --verbose",
+    "test:watch": "ava --verbose --watch"
   },
   "repository": {
     "type": "git",
