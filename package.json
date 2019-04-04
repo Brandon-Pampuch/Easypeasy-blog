@@ -10,11 +10,29 @@
     "type": "git",
     "url": "git+https://github.com/wurde/Easypeasy-blog.git"
   },
-  "keywords": ["Blog", "Blog Platform", "Lambda WEB19"],
-  "author": ["Andy Bettisworth", "Brandon Pampuch", "Moses Samuel"],
+  "keywords": [
+    "Blog",
+    "Blog Platform",
+    "Lambda WEB19"
+  ],
+  "author": [
+    "Andy Bettisworth",
+    "Brandon Pampuch",
+    "Moses Samuel"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/wurde/Easypeasy-blog/issues"
   },
-  "homepage": "https://github.com/wurde/Easypeasy-blog#readme"
+  "homepage": "https://github.com/wurde/Easypeasy-blog#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-react-views": "^0.11.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "ava": "^1.4.1",
+    "puppeteer": "^1.14.0"
+  }
 }
