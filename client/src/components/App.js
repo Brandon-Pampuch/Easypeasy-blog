@@ -4,13 +4,13 @@
  * Dependencies
  */
 
-const React = require('react')
+const React, { Component } = require('react')
 
 /**
  * Define component
  */
 
-class HelloMessage extends React.Component {
+export default class App extends Component {
   render() {
     return <div>Hello Team Easypeasy!</div>
   }
@@ -20,4 +20,3 @@ class HelloMessage extends React.Component {
  * Export component
  */
 
-module.exports = HelloMessage
