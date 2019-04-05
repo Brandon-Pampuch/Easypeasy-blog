@@ -23,7 +23,7 @@ const host = "easypeasy-blog"
 const port = process.env.PORT || 8080
 const env = process.env.NODE_ENV || "development"
 const base = path.join(__dirname, "..")
-const views = path.join(base, "/app/views")
+const views = path.join(base, "client/src/components")
 
 /**
  * Locals
