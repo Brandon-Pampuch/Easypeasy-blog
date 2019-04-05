@@ -4,19 +4,12 @@
  * Dependencies
  */
 
-const React, { Component } = require('react')
+import React from 'react'
 
-/**
- * Define component
- */
 
-export default class App extends Component {
+export default class App extends React.Component {
   render() {
     return <div>Hello Team Easypeasy!</div>
   }
 }
-
-/**
- * Export component
- */
 
