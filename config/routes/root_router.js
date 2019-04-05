@@ -7,7 +7,7 @@ module.exports = (app) => {
 
   const base = app.locals.base
   const express = require('express')
-  const RootController = require(base + "/app/controllers/root_controller")(app)
+  const RootController = require(base + "/client/src/controllers/root_controller")(app)
 
   /**
    * Initialize router.
