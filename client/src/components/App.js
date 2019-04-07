@@ -1,15 +1,22 @@
-'use strict'
-
 /**
  * Dependencies
  */
 
 import React from 'react'
+import BlogGrid from './BlogGrid'
+import initialState from '../../../data/initialState.json'
 
 
 export default class App extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      ...initialState
+    }
+  }
+
   render() {
-    return <div>Hello Team Easypeasy!</div>
+    return <BlogGrid allPosts={this.state.blogPosts} />
   }
 }
 
