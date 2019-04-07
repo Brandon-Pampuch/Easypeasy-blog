@@ -12,11 +12,16 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
+* 2 minor enhancements: 
+
+  * add initial state
+  * UI: add BlogGrid and BlogPostPreview components
+
 ## 2019-04-05, Version 0.1.0
 
 * 20 minor enhancements:
 
-  * Initialized project
+  * initialized project
   * refactor folder structure for SPA
   * deps: install express ^4.16.4
   * deps: install react ^16.8.6
