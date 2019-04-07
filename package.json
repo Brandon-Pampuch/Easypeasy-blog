@@ -1,5 +1,6 @@
 {
   "name": "Easypeasy-blog",
+  "private": true,
   "version": "0.1.0",
   "description": "A simple blog with big plans.",
   "main": "node config/app.js",
