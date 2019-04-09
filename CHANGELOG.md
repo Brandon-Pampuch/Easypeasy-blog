@@ -12,10 +12,11 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
-* 2 minor enhancements: 
+* 3 minor enhancements: 
 
   * add initial state
   * UI: add BlogGrid and BlogPostPreview components
+  * UI: add BlogPost component
 
 ## 2019-04-05, Version 0.1.0
 
