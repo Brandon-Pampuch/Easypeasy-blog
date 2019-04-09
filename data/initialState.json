@@ -1,7 +1,7 @@
 {
     "blogPosts": [
         {
-          "id": "83217418fafew'",
+          "id": "1",
           "featuredImg": {
             "src":"http://images.unsplash.com/photo-1522720833375-9c27ffb02a5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1374&q=80",
             "caption": "Dory Fish"
@@ -12,7 +12,7 @@
           "summary": "lorem ipsum dipsum"
         },
         {
-          "id": "83217418fafew'",
+          "id": "2",
           "featuredImg": {
             "src":"http://images.unsplash.com/photo-1534043464124-3be32fe000c9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=650&q=80",
             "caption": "the most beautiful fish in all the sea"
@@ -22,7 +22,7 @@
           "summary": "lorem ipsum dipsum"
         },
         {
-          "id": "83217418fafew'",
+          "id": "3",
           "featuredImg": {
             "src": "http://images.unsplash.com/photo-1522069169874-c58ec4b76be5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=656&q=80",
             "caption": "Orange fish"
