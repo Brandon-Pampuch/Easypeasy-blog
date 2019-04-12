@@ -28,11 +28,6 @@ class App extends React.Component {
           )}
         />
         <Route
-          exact
-          path="/posts"
-          render={props => <BlogPostPreview {...props} />}
-        />
-        <Route
           path="/posts/:id"
           render={props => (
             <BlogPost {...props} allPosts={this.state.blogPosts} />
