@@ -16,8 +16,8 @@ const styles = {
 
 export default function BlogPost(post) {
   return (
-    <article style={styles.container} class="container">
-      <header class="blog-head">
+    <article style={styles.container} className="container">
+      <header className="blog-head">
         <h2>{post.title}</h2>
         <img>{post.featuredImg}</img>
       </header>

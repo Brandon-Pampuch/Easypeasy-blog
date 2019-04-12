@@ -12,11 +12,13 @@ export default function BlogGrid({ allPosts }) {
   return (
     <div style={styles.div}>
       {allPosts.map((post, i) => (
-        <BlogPostPreview
-          key={i}
-          summary={post.summary}
-          featuredImg={post.featuredImg}
-        />
+        <Link key={i} to={`/posts/${post.id}`}>
+          <BlogPostPreview
+            key={i}
+            summary={post.summary}
+            featuredImg={post.featuredImg}
+          />
+        </Link>
       ))}
     </div>
   )
