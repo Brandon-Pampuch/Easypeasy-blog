@@ -1,4 +1,5 @@
 import React from 'react'
+import { withRouter } from 'react-router-dom'
 
 const styles = {
   container: {
@@ -14,16 +15,18 @@ const styles = {
   }
 }
 
-export default function BlogPost(post) {
+function BlogPost({ allPosts, match }) {
+  const post = allPosts.find(post => post.id === match.params.id)
+  console.log(post)
   return (
-    <article style={styles.container} className="container">
-      <header className="blog-head">
-        <h2>{post.title}</h2>
-        <img>{post.featuredImg}</img>
-      </header>
-      <section>
-        <p>{post.body}</p>
-      </section>
-    </article>
+    <div style={styles}>
+      <h1>{post.title}</h1>
+      <figure>
+        <img src={post.featuredImg.src} />
+        <figcaption>{post.featuredImg.caption}</figcaption>
+      </figure>
+      <div>{post.body}</div>
+    </div>
   )
 }
+export default withRouter(BlogPost)
