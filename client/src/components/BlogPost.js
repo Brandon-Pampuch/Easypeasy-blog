@@ -17,7 +17,6 @@ const styles = {
 
 function BlogPost({ allPosts, match }) {
   const post = allPosts.find(post => post.id === match.params.id)
-  console.log(post)
   return (
     <div style={styles}>
       <h1>{post.title}</h1>
