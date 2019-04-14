@@ -6,7 +6,6 @@
 
 const path = require('path')
 const express = require('express')
-const express_react_views = require('express-react-views')
 
 /**
  * Define app
@@ -19,11 +18,11 @@ const app = express()
  */
 
 const title = "Easypeasy Blog"
-const host = "easypeasy-blog"
+const host = "easypeasy"
 const port = process.env.PORT || 8080
 const env = process.env.NODE_ENV || "development"
 const base = path.join(__dirname, "..")
-const views = path.join(base, "client/src/components")
+const views = path.join(base, "client/dist")
 
 /**
  * Locals

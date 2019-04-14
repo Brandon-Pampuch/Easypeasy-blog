@@ -12,11 +12,12 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
-* 3 minor enhancements: 
+* 4 minor enhancements:
 
   * add initial state
   * UI: add BlogGrid and BlogPostPreview components
   * UI: add BlogPost component
+  * deps: remove express-react-views
 
 ## 2019-04-05, Version 0.1.0
 
