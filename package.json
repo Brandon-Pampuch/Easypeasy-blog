@@ -3,12 +3,12 @@
   "private": true,
   "version": "0.1.0",
   "description": "A simple blog with big plans.",
-  "main": "node config/app.js",
+  "main": "node server/app.js",
   "scripts": {
     "start": "webpack-dev-server --open",
-    "start:server": "node config/app.js",
+    "start:server": "node server/app.js",
     "build": "webpack",
-    "pretest": "NODE_ENV=test PORT=8888 node config/app.js &",
+    "pretest": "NODE_ENV=test PORT=8888 node server/app.js &",
     "test": "ava **/*_test.js --verbose",
     "posttest": "pkill --signal SIGINT easypeasy"
   },
@@ -33,6 +33,7 @@
   "homepage": "https://github.com/wurde/Easypeasy-blog#readme",
   "dependencies": {
     "express": "^4.16.4",
+    "express-react-views": "^0.11.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0"
