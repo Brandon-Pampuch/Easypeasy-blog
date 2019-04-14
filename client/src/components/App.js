@@ -1,13 +1,19 @@
+'use strict'
+
 /**
  * Dependencies
  */
 
 import React from 'react'
-import { Switch, Route, withRouter } from 'react-router-dom'
+import { BrowserRouter, Switch, Route, withRouter } from 'react-router-dom'
 import BlogGrid from './BlogGrid'
 import BlogPost from './BlogPost'
 import initialState from '../../../data/initialState.json'
 import BlogPostPreview from './BlogPostPreview'
+
+/**
+ * Define component
+ */
 
 class App extends React.Component {
   constructor(props) {
@@ -19,22 +25,23 @@ class App extends React.Component {
 
   render() {
     return (
-      <Switch>
-        <Route
-          exact
-          path="/"
-          render={props => (
-            <BlogGrid {...props} allPosts={this.state.blogPosts} />
-          )}
-        />
-        <Route
-          path="/posts/:id"
-          render={props => (
-            <BlogPost {...props} allPosts={this.state.blogPosts} />
-          )}
-        />
-        >
-      </Switch>
+      <BrowserRouter>
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={props => (
+              <BlogGrid {...props} allPosts={this.state.blogPosts} />
+            )}
+          />
+          <Route
+            path="/posts/:id"
+            render={props => (
+              <BlogPost {...props} allPosts={this.state.blogPosts} />
+            )}
+          />
+        </Switch>
+      </BrowserRouter>
     )
   }
 }
