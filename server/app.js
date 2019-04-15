@@ -6,7 +6,6 @@
 
 const path = require('path')
 const express = require('express')
-const express_react_views = require('express-react-views')
 
 /**
  * Define app
@@ -19,11 +18,10 @@ const app = express()
  */
 
 const title = "Easypeasy Blog"
-const host = "easypeasy-blog"
+const host = "easypeasy"
 const port = process.env.PORT || 8080
 const env = process.env.NODE_ENV || "development"
 const base = path.join(__dirname, "..")
-const views = path.join(base, "client/src/components")
 
 /**
  * Locals
@@ -34,7 +32,6 @@ app.locals.host = host
 app.locals.port = port
 app.locals.env = env
 app.locals.base = base
-app.locals.views = views
 
 /**
  * Settings
@@ -45,18 +42,10 @@ app.disable("x-powered-by")
 app.set("json spaces", 2)
 
 /**
- * View engine
+ * Mount static assets
  */
 
-app.engine('jsx', express_react_views.createEngine())
-app.set('view engine', 'jsx')
-app.set("views", views)
-
-/**
- * Routes
- */
-
-app.use("/", require("./routes/root_router")(app))
+app.use("/", express.static(base + "/client/dist/assets"))
 
 /**
  * Start server

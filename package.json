@@ -3,12 +3,14 @@
   "private": true,
   "version": "0.1.0",
   "description": "A simple blog with big plans.",
-  "main": "node config/app.js",
+  "main": "node server/app.js",
   "scripts": {
     "start": "webpack-dev-server --open",
+    "start:server": "node server/app.js",
     "build": "webpack",
-    "test": "ava --verbose",
-    "test:watch": "ava --verbose --watch"
+    "pretest": "NODE_ENV=test PORT=8888 node server/app.js &",
+    "test": "ava **/*.test.js --verbose",
+    "posttest": "pkill --signal SIGINT easypeasy"
   },
   "repository": {
     "type": "git",
