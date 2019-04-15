@@ -1,45 +1,31 @@
-import React from "react"
+import React from 'react'
+import { withRouter } from 'react-router-dom'
 
-    const styles = {
+const styles = {
+  container: {
+    maxWidth: '1200px',
+    margin: '0 auto',
+    border: '2px solid black',
+    boxShadow: '2px 2px 2px rgba(50,50,50,.8)'
+  },
 
-        container: {
-            maxWidth: "1200px",
-            margin: "0 auto",
-            border: "2px solid black",
-            boxShadow: "2px 2px 2px rgba(50,50,50,.8)"
-
-        },
-
-        header: {
-            margin: "0 auto",
-            width: "80%"
-            
-        }
-
-        
-
-
-    }
-
-export default function BlogPost(post){
-
-    
-
-
-    return (
-        <article style={styles.container} class="container">
-            <header class="blog-head">
-                <h2>{post.title}</h2>
-                <img>{post.featuredImg}</img>
-            </header>
-            <section>
-                <p>{post.body}</p>
-            </section>
-        </article>
-
-
-    
-
-        
-    )
+  header: {
+    margin: '0 auto',
+    width: '80%'
+  }
 }
+
+function BlogPost({ allPosts, match }) {
+  const post = allPosts.find(post => post.id === match.params.id)
+  return (
+    <div style={styles}>
+      <h1>{post.title}</h1>
+      <figure>
+        <img src={post.featuredImg.src} />
+        <figcaption>{post.featuredImg.caption}</figcaption>
+      </figure>
+      <div>{post.body}</div>
+    </div>
+  )
+}
+export default withRouter(BlogPost)

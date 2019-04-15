@@ -1,36 +1,49 @@
+'use strict'
+
 /**
  * Dependencies
  */
 
 import React from 'react'
+import { BrowserRouter, Switch, Route, withRouter } from 'react-router-dom'
 import BlogGrid from './BlogGrid'
 import BlogPost from './BlogPost'
 import initialState from '../../../data/initialState.json'
+import BlogPostPreview from './BlogPostPreview'
 
+/**
+ * Define component
+ */
 
-export default class App extends React.Component {
-  constructor() {
-    super()
+class App extends React.Component {
+  constructor(props) {
+    super(props)
     this.state = {
       ...initialState
     }
   }
 
   render() {
-    return  (this.props.param.id)  
-      ? this.state.blogPosts.reduce((acc,cur) => {
-        if(this.props.param.id === cur.id){
-        return <BlogPost post={post}/>
-        }else{
-          return "put 404 here"
-        }
-      },this.props.param.id)
-
-
-
-
-
-      : <BlogGrid allPosts={this.state.blogPosts} />
+    return (
+      <BrowserRouter>
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={props => (
+              <BlogGrid {...props} allPosts={this.state.blogPosts} />
+            )}
+          />
+          <Route
+            path="/posts/:id"
+            render={props => (
+              <BlogPost {...props} allPosts={this.state.blogPosts} />
+            )}
+          />
+        </Switch>
+      </BrowserRouter>
+    )
   }
 }
 
+export default App
