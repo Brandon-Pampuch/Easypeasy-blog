@@ -18,6 +18,6 @@ const url = "http://localhost:8888"
  * Assertions
  */
 
-test('Root page title', with_page, async (t, page) => {
+test('Root page title', (t, page) => {
   t.pass()
 })
