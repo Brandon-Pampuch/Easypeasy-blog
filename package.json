@@ -5,7 +5,7 @@
   "description": "A simple blog with big plans.",
   "main": "node server/app.js",
   "scripts": {
-    "start": "webpack-dev-server --open",
+    "start": "NODE_ENV=development webpack-dev-server --open --hot --mode development",
     "start:server": "node server/app.js",
     "build": "webpack",
     "pretest": "NODE_ENV=test PORT=8888 node server/app.js &",
