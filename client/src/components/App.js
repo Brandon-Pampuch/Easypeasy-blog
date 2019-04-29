@@ -11,7 +11,15 @@ import BlogGrid from './BlogGrid'
 import BlogPost from './BlogPost'
 import BlogPostPreview from './BlogPostPreview'
 
+/**
+ * Import component styles
+ */
+
 import '../styles/App.scss'
+
+/**
+ * Import initial data
+ */
 
 import initialState from '../../../data/initialState.json'
 
