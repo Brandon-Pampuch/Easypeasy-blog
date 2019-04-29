@@ -5,6 +5,12 @@
 @import './global/reset.scss';
 @import './global/reboot.scss';
 
+/**
+ * Grid framework using class-based styles
+ */
+
+@import 'grid/grid.scss';
+
 /*
   App component styles
 */
@@ -36,8 +42,7 @@
     .box {
         height: auto;
         width: 400px;
-        // background: rgba(24,59,98, 0.7);
-        background: teal;
+        background: rgba(24,59,98, 0.7);
 
         &--large {
             height: auto;
