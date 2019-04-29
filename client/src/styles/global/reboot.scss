@@ -2,3 +2,23 @@
  * Reboot styles
  * Description: Global CSS styles.
  */
+
+/**
+ * Ensure `width` is not affected by `padding` or `border`.
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/**
+ * Always hide an element with the `hidden` HTML attribute.
+ * Needed for proper display in IE 10.
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
