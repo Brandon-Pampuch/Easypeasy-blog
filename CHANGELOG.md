@@ -12,6 +12,13 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
+*1 minor enhancement: 
+    * deps: add style-loader
+    * deps: add css-loader
+    * deps: add sass-loader
+    * deps-dev: node-sass
+
+
 * 6 minor enhancements:
 
   * add initial state
