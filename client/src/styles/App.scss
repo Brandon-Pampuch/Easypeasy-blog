@@ -16,12 +16,7 @@
 */
 
 .app {
-    position: relative;
-    padding: .5rem;
-    margin: 1rem;
-    border: 2px double rgba(200,200,200, 0.3);
     box-shadow: 1px 1px 3px rgba(150,150,150,0.5);
-    margin: 0 auto;
 
     &__div, &__container, &__article {
         padding: 5rem;
@@ -34,7 +29,6 @@
         width: 200px;
 
         &--large {
-            height: auto;
             width: 500px;
         }
     }
@@ -50,6 +44,4 @@
             max-width: 800px;
         }
     }
-
-
 }
