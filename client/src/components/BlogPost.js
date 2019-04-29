@@ -18,10 +18,10 @@ const styles = {
 function BlogPost({ allPosts, match }) {
   const post = allPosts.find(post => post.id === match.params.id)
   return (
-    <div style={styles}>
+    <div className="app__div box box--large" style={styles}>
       <h1>{post.title}</h1>
       <figure>
-        <img src={post.featuredImg.src} />
+        <img className="app__img" src={post.featuredImg.src} />
         <figcaption>{post.featuredImg.caption}</figcaption>
       </figure>
       <div>{post.body}</div>

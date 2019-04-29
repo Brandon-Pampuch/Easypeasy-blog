@@ -1,0 +1,39 @@
+.app {
+    position: relative;
+    padding: .5rem;
+    margin: 1rem;
+    border: 2px double rgba(200,200,200, 0.3);
+    box-shadow: 1px 1px 3px rgba(150,150,150,0.5);
+    margin: 0 auto;
+
+    &__div, &__container, &__article {
+        padding: 5rem;
+        margin: 0.5rem;
+        border: 1px solid rgba(150,150,150,0.5);
+    }
+
+    &__img {
+        height: auto;
+        width: 200px;
+
+        &--large {
+            height: auto;
+            width: 500px;
+        }
+    }
+
+    .box {
+        height: auto;
+        width: 400px;
+        // background: rgba(24,59,98, 0.7);
+        background: teal;
+
+        &--large {
+            height: auto;
+            width: 600px;
+            max-width: 800px;
+        }
+    }
+
+
+}

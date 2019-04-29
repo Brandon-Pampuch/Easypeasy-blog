@@ -10,7 +10,7 @@ const styles = {
 
 export default function BlogGrid({ allPosts }) {
   return (
-    <div style={styles.div}>
+    <div className="app__div box" style={styles.div}>
       {allPosts.map((post, i) => (
         <Link key={i} to={`/posts/${post.id}`}>
           <BlogPostPreview

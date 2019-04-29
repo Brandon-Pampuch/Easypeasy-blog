@@ -12,4 +12,4 @@ import App from './components/App'
  * Render DOM
  */
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<App className="app" />, document.getElementById('root'))

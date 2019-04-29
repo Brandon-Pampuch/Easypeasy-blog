@@ -6,10 +6,14 @@
 
 import React from 'react'
 import { BrowserRouter, Switch, Route, withRouter } from 'react-router-dom'
+
 import BlogGrid from './BlogGrid'
 import BlogPost from './BlogPost'
-import initialState from '../../../data/initialState.json'
 import BlogPostPreview from './BlogPostPreview'
+
+import '../sass/app.scss'
+
+import initialState from '../../../data/initialState.json'
 
 /**
  * Define component

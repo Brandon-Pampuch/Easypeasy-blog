@@ -18,9 +18,10 @@ const styles = {
 
 export default function BlogPostPreview(props) {
   return (
-    <div style={styles.div}>
+    <div className="app__div box" style={styles.div}>
       <figure sytle={styles.figure}>
         <img
+          className="app__img app__img--large"
           style={styles.img}
           src={props.featuredImg.src}
           alt={props.featuredImg.caption}
