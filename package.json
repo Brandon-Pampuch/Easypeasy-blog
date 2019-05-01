@@ -9,7 +9,7 @@
     "start:server": "node server/app.js",
     "build": "webpack",
     "pretest": "NODE_ENV=test PORT=8888 node server/app.js &",
-    "test": "ava **/*.test.js --verbose",
+    "test": "ava **/*_test.js --verbose",
     "posttest": "pkill --signal SIGINT easypeasy"
   },
   "repository": {
@@ -31,6 +31,20 @@
     "url": "https://github.com/wurde/Easypeasy-blog/issues"
   },
   "homepage": "https://github.com/wurde/Easypeasy-blog#readme",
+  "ava": {
+    "babel": {
+      "testOptions": {
+        "babelrc": false,
+        "configFile": false
+      }
+    }
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
   "dependencies": {
     "express": "^4.16.4",
     "express-react-views": "^0.11.0",
