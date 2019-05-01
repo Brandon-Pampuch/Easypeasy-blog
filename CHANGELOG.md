@@ -25,6 +25,10 @@ Changes are categorized as follows:
   * deps(dev): install sass-loader ^7.1.0
   * deps(dev): install node-sass ^4.12.0
 
+* 1 bug fix:
+
+  * Resolve AVA and Babel config conflicts (tests run!)
+
 ## 2019-04-05, Version 0.1.0
 
 * 20 minor enhancements:
