@@ -3,13 +3,12 @@
   "private": true,
   "version": "0.1.0",
   "description": "A simple blog with big plans.",
-  "main": "node server/app.js",
   "scripts": {
-    "start": "NODE_ENV=development webpack-dev-server --open --hot --mode development",
-    "start:server": "node server/app.js",
-    "build": "webpack",
+    "start": "node server/app.js",
+    "start:dev": "webpack-dev-server --open --hot --mode development",
+    "build": "NODE_ENV=production webpack --mode production",
     "pretest": "NODE_ENV=test PORT=8888 node server/app.js &",
-    "test": "ava **/*.test.js --verbose",
+    "test": "ava **/*_test.js --verbose",
     "posttest": "pkill --signal SIGINT easypeasy"
   },
   "repository": {
@@ -31,6 +30,20 @@
     "url": "https://github.com/wurde/Easypeasy-blog/issues"
   },
   "homepage": "https://github.com/wurde/Easypeasy-blog#readme",
+  "ava": {
+    "babel": {
+      "testOptions": {
+        "babelrc": false,
+        "configFile": false
+      }
+    }
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
   "dependencies": {
     "express": "^4.16.4",
     "express-react-views": "^0.11.0",

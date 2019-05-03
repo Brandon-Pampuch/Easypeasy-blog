@@ -11,7 +11,7 @@ const puppeteer = require('puppeteer')
  */
 
 async function with_page(t, run) {
-  const browser = await puppeteer.launch({headless: false})
+  const browser = await puppeteer.launch()
   const page = await browser.newPage()
 
   try {

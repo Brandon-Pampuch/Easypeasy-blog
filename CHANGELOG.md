@@ -12,14 +12,7 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
-*1 minor enhancement: 
-    * deps: add style-loader
-    * deps: add css-loader
-    * deps: add sass-loader
-    * deps-dev: node-sass
-
-
-* 6 minor enhancements:
+* 10 minor enhancements:
 
   * add initial state
   * UI: add BlogGrid and BlogPostPreview components
@@ -27,6 +20,14 @@ Changes are categorized as follows:
   * deps: remove express-react-views
   * Separated concerns between ./client and ./server
   * test: add first test
+  * deps(dev): install style-loader ^0.23.1
+  * deps(dev): install css-loader ^2.1.1
+  * deps(dev): install sass-loader ^7.1.0
+  * deps(dev): install node-sass ^4.12.0
+
+* 1 bug fix:
+
+  * Resolve AVA and Babel config conflicts (tests run!)
 
 ## 2019-04-05, Version 0.1.0
 
