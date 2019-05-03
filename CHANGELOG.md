@@ -12,7 +12,7 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
-* 10 minor enhancements:
+* 11 minor enhancements:
 
   * add initial state
   * UI: add BlogGrid and BlogPostPreview components
@@ -24,6 +24,7 @@ Changes are categorized as follows:
   * deps(dev): install css-loader ^2.1.1
   * deps(dev): install sass-loader ^7.1.0
   * deps(dev): install node-sass ^4.12.0
+  * test: refactored helper functions
 
 * 1 bug fix:
 
