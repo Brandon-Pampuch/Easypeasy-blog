@@ -14,7 +14,7 @@ Changes are categorized as follows:
 
 * 11 minor enhancements:
 
-  * add initial state
+  * data: add initial state
   * UI: add BlogGrid and BlogPostPreview components
   * UI: add BlogPost component
   * deps: remove express-react-views
