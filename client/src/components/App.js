@@ -30,7 +30,7 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <Switch>
+      
           <Route
             exact
             path="/"
@@ -44,7 +44,7 @@ class App extends React.Component {
               <BlogPost {...props} allPosts={this.state.blogPosts} />
             )}
           />
-        </Switch>
+     
       </BrowserRouter>
     )
   }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { withRouter } from 'react-router-dom'
+
 
 const styles = {
   container: {
@@ -28,4 +28,4 @@ function BlogPost({ allPosts, match }) {
     </div>
   )
 }
-export default withRouter(BlogPost)
+export default BlogPost
