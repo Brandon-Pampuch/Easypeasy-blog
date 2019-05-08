@@ -5,11 +5,13 @@
  */
 
 import React from 'react'
-import { BrowserRouter, Switch, Route, withRouter } from 'react-router-dom'
+import { BrowserRouter, Link , Route } from 'react-router-dom'
 
 import BlogGrid from './BlogGrid'
 import BlogPost from './BlogPost'
 import BlogPostPreview from './BlogPostPreview'
+import LandingPage from './LandingPage'
+
 
 import '../sass/app.scss'
 
@@ -30,10 +32,23 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-      
+
+          <header>
+            <nav>
+              <Link to={"1"}>Login</Link>
+              <Link to={"1"}>Sign up</Link>
+            </nav>
+          </header>
           <Route
             exact
             path="/"
+            render={props => (
+              <LandingPage {...props} />
+            )} 
+          />
+          <Route
+            exact
+            path="/blog-grid"
             render={props => (
               <BlogGrid {...props} allPosts={this.state.blogPosts} />
             )}
