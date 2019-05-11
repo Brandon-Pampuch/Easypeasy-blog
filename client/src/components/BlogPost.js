@@ -20,7 +20,10 @@ const styles = {
 function BlogPost({ allPosts, match }) {
   const post = allPosts.find(post => post.id === match.params.id)
   return (
-    <ErrorBoundary statusCode={404}>
+    <ErrorBoundary 
+      statusCode={404} 
+      message={`Sorry, we couldn't find "${post.tile}" in our records.`}
+    >
       <div className="app__div box box--large" style={styles}>
         <h1>{post.title}</h1>
         <figure>
