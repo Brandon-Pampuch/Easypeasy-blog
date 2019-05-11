@@ -6,7 +6,8 @@ module.exports = {
     entry: path.join(__dirname, '/client/src/index.js'),
     output: {
         path: path.resolve(__dirname, 'client/dist/assets'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        publicPath: '/'
     },
     module: {
         rules: [
@@ -22,13 +23,13 @@ module.exports = {
             }
         ]
     },
-
     devServer: {
         contentBase: path.join(__dirname, '/client/dist'),
         compress: true,
         port: 8080,
         hot: true,
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        historyApiFallback: true,
     },
     plugins: [
         new HtmlWebPackPlugin({

@@ -1,5 +1,5 @@
 import React from 'react'
-import { withRouter } from 'react-router-dom'
+
 
 import ErrorBoundary from './ErrorBoundary'
 
@@ -36,4 +36,4 @@ function BlogPost({ allPosts, match }) {
   )
 }
 
-export default withRouter(BlogPost)
+export default BlogPost
