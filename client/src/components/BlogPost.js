@@ -1,6 +1,8 @@
 import React from 'react'
 
 
+import ErrorBoundary from './ErrorBoundary'
+
 const styles = {
   container: {
     maxWidth: '1200px',
@@ -18,14 +20,20 @@ const styles = {
 function BlogPost({ allPosts, match }) {
   const post = allPosts.find(post => post.id === match.params.id)
   return (
-    <div className="app__div box box--large" style={styles}>
-      <h1>{post.title}</h1>
-      <figure>
-        <img className="app__img" src={post.featuredImg.src} />
-        <figcaption>{post.featuredImg.caption}</figcaption>
-      </figure>
-      <div>{post.body}</div>
-    </div>
+    <ErrorBoundary 
+      statusCode={404} 
+      message={`Sorry, we couldn't find "${post.tile}" in our records.`}
+    >
+      <div className="app__div box box--large" style={styles}>
+        <h1>{post.title}</h1>
+        <figure>
+          <img className="app__img" src={post.featuredImg.src} />
+          <figcaption>{post.featuredImg.caption}</figcaption>
+        </figure>
+        <div>{post.body}</div>
+      </div>
+    </ErrorBoundary>
   )
 }
+
 export default BlogPost
