@@ -13,7 +13,15 @@ import BlogPostPreview from './BlogPostPreview'
 import LandingPage from './LandingPage'
 
 
-import '../sass/app.scss'
+/**
+ * Import component styles
+ */
+
+import '../styles/App.scss'
+
+/**
+ * Import initial data
+ */
 
 import initialState from '../../../data/initialState.json'
 

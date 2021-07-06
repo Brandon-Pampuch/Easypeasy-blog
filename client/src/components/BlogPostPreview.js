@@ -11,7 +11,6 @@ const styles = {
   },
 
   img: {
-    width: '500px',
     padding: '1rem'
   }
 }

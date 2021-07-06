@@ -10,16 +10,22 @@ const styles = {
 
 export default function BlogGrid({ allPosts }) {
   return (
-    <div className="app__div box" style={styles.div}>
-      {allPosts.map((post, i) => (
-        <Link key={i} to={`/posts/${post.id}`}>
-          <BlogPostPreview
-            key={i}
-            summary={post.summary}
-            featuredImg={post.featuredImg}
-          />
-        </Link>
-      ))}
+    <div className="app app__div box" style={styles.div}>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            {allPosts.map((post, i) => (
+              <Link key={i} to={`/posts/${post.id}`}>
+                <BlogPostPreview
+                  key={i}
+                  summary={post.summary}
+                  featuredImg={post.featuredImg}
+                />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
